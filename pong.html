@@ -158,8 +158,8 @@ function loop() {
   context.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
 
   // move ball by its velocity
-  ball.x += ballSpeed;
-  ball.y += -1*ballSpeed;
+  ball.x += ball.dx;
+  ball.y += ball.dy;
 
   // prevent ball from going through walls by changing its velocity
   if (ball.y < grid) {
