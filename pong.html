@@ -240,12 +240,14 @@ document.addEventListener('keydown', function(e) {
   // w key
   if (e.which === 87) {
     //leftPaddle.dy = -paddleSpeed;
-    ballSpeed = ++ballSpeed;
+    ball.dx += Math.sign(ball.dx);
+    ball.dy += Math.sign(ball.dy);
   }
   // a key
   else if (e.which === 83) {
     //leftPaddle.dy = paddleSpeed;
-    ballSpeed = ballSpeed - 1;
+    ball.dx -= Math.sign(ball.dx);
+    ball.dy -= Math.sign(ball.dy);
   }
 });
 
