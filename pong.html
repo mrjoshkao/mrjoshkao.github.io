@@ -243,8 +243,8 @@ document.addEventListener('keydown', function(e) {
     ball.dx += Math.sign(ball.dx);
     ball.dy += Math.sign(ball.dy);
   }
-  // a key
-  else if (e.which === 83) {
+  // s key
+  else if (e.which === 83 && Math.abs(ball.dx) > 1) {
     //leftPaddle.dy = paddleSpeed;
     ball.dx -= Math.sign(ball.dx);
     ball.dy -= Math.sign(ball.dy);
